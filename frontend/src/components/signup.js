@@ -37,7 +37,7 @@ const Signup = () => {
   const register = (e) => {
     e.preventDefault();
     if (validateInputs()) {
-      Axios.post("http://localhost:5000/api/auth/register", {
+      Axios.post("https://college-fsd-task.onrender.com/api/auth/register", {
         email: email,
         name: name,
         password: password,

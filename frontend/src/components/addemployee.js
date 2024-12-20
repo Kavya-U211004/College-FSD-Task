@@ -13,7 +13,7 @@ function AddEmployee() {
  
     const create = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:5000/api/employees/create", {
+        axios.post("https://college-fsd-task.onrender.com/api/employees/create", {
           name: name,
           email: email,
           address: address,

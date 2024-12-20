@@ -6,7 +6,7 @@ function Employee() {
   const [data, setData] = useState([])
  
   useEffect(()=> {
-    axios.get('http://localhost:5000/api/employees/getEmployee') 
+    axios.get('https://college-fsd-task.onrender.com/api/employees/getEmployee') 
     .then(res => {
       if(res.data.Status === "Success") {
         setData(res.data.Result);
@@ -18,7 +18,7 @@ function Employee() {
   }, [])
  
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/api/employees/delete/${id}`) 
+    axios.delete(`https://college-fsd-task.onrender.com/api/employees/delete/${id}`) 
     .then(res => {
       if(res.data.Status === "Success") {
         window.location.reload(true);

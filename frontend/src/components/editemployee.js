@@ -21,7 +21,7 @@ function EditEmployee() {
     };
   
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/employees/get/${id}`) 
+        axios.get(`https://college-fsd-task.onrender.com/api/employees/get/${id}`) 
         .then(res => {
             console.log(res.data.Result[0])
             setemployee(res.data.Result[0]);
@@ -33,7 +33,7 @@ function EditEmployee() {
         e.preventDefault();
   
         try {
-            await axios.put(`http://localhost:5000/api/employees/update/${id}`, employee); 
+            await axios.put(`https://college-fsd-task.onrender.com/api/employees/update/${id}`, employee); 
             navigate("/");
         } catch (err) {
             console.log(err);

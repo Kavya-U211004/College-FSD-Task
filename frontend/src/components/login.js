@@ -13,7 +13,7 @@ const Login = () => {
      
     const login = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:5000/api/auth/login", {
+        axios.post("https://college-fsd-task.onrender.com/api/auth/login", {
           email: email,
           password: password,
         })
